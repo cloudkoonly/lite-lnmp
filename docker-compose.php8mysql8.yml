@@ -16,7 +16,6 @@ services:
       - ./logs/nginx:/var/log/nginx:rw
     depends_on:
       - php8
-      - php7
 
   php8:
     container_name: php8
@@ -38,7 +37,7 @@ services:
     container_name: mysql8
     build: ./mysql8
     ports:
-      - "3308:3306"
+      - "3306:3306"
     volumes:
       - ./mysql8/data:/var/lib/mysql:rw
       - ./mysql8/sql:/tmp/sql:rw
@@ -49,31 +48,3 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "123456"
     command: --sql-mode="STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
-
-  php7:
-    container_name: php7
-    build: ./php7
-    volumes:
-      - ./app:/usr/share/nginx/html
-      - ./php7/etc:/usr/local/etc/php:rw
-      - /etc/localtime:/etc/localtime:ro
-      - ./php7/etc/php-fpm.conf:/usr/local/etc/php-fpm.conf:rw
-      - ./logs/php7:/var/log/php:rw
-      - /vagrant/gitee:/gitee:rw
-      - /data:/data:rw
-    depends_on:
-      - mysql
-
-  mysql:
-    container_name: mysql
-    build: ./mysql
-    ports:
-      - "3306:3306"
-    volumes:
-      - ./mysql/data:/var/lib/mysql:rw
-      - ./mysql/sql:/tmp/sql:rw
-      - ./mysql/etc:/etc/mysql:rw
-      - /etc/localtime:/etc/localtime:ro
-      - ./logs/mysql:/var/log/mysql:rw
-    environment:
-      MYSQL_ROOT_PASSWORD: "123456"

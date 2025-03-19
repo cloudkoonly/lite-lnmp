@@ -51,6 +51,23 @@ lite-lnmp/
 ### Licence
 Licence MIT
 
+### Avertissement
+⚠️ **Avis Important :**
+
+1. **Environnement de Développement Uniquement** : Ce projet est conçu et testé uniquement pour les environnements de développement. Il n'a pas été rigoureusement testé pour une utilisation en production.
+
+2. **Pas d'Utilisation en Production** : Nous déconseillons fortement l'utilisation de cette configuration en environnement de production sans audit de sécurité et tests de performance appropriés.
+
+3. **Considérations de Sécurité** : Bien que nous suivions les meilleures pratiques, cet environnement peut ne pas répondre à toutes les exigences de sécurité pour les déploiements en production.
+
+4. **Aucune Garantie** : Ce logiciel est fourni "tel quel", sans aucune garantie. Utilisation à vos propres risques.
+
+5. **Limitations du Support** : Bien que nous accueillions les rapports de bugs et les contributions, nous ne pouvons garantir un support ou des corrections immédiats.
+
+6. **Considérations de Performance** : Les configurations par défaut sont optimisées pour la commodité du développement plutôt que pour la performance.
+
+En utilisant ce logiciel, vous reconnaissez et acceptez ces limitations et risques.
+
 ---
 
 © 2025 [Cloudkoonly](https://www.cloudkoonly.com). Tous droits réservés.
