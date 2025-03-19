@@ -53,8 +53,8 @@ lite-lnmp/
 
 ### Default Ports
 - Nginx: 80, 443
-- PHP: 8080 (PHP 8.x) / 8081 (PHP 7.x)
-- MySQL: 3306 (MySQL 8.0) / 3307 (MySQL 5.7)
+- PHP 8.x / PHP 7.x
+- MySQL: 3308 (MySQL 8.0) / 3306 (MySQL 5.7)
 
 ### License
 MIT License
