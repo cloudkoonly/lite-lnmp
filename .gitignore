@@ -1,0 +1,17 @@
+/.idea
+*.log
+mysql/data/*
+!mysql/data/.gitkeep
+mysql/sql/*
+!mysql/sql/.gitkeep
+mysql8/data/*
+!mysql8/data/.gitkeep
+mysql8/sql/*
+!mysql8/sql/.gitkeep
+nginx/ca/*
+!nginx/ca/.gitkeep
+nginx/conf.d/*
+!nginx/conf.d/default.conf
+/.vagrant
+/app/*
+!/app/hello/*

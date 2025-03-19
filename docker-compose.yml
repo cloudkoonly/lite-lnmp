@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./app:/usr/share/nginx/html
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:rw
+      - ./nginx/conf.d/:/etc/nginx/conf.d/:rw
+      - ./nginx/ca:/etc/nginx/ca:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ./logs/nginx:/var/log/nginx:rw
+    depends_on:
+      - php8
+
+  php8:
+    container_name: php8
+    build: ./php8
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./app:/usr/share/nginx/html
+      - ./php8/etc:/usr/local/etc/php:rw
+      - /etc/localtime:/etc/localtime:ro
+      - ./php8/etc/php-fpm.conf:/usr/local/etc/php-fpm.conf:rw
+      - ./logs/php8:/var/log/php:rw
+      - /vagrant/gitee:/gitee:rw
+      - /data:/data:rw
+    depends_on:
+      - mysql8
+
+  mysql8:
+    container_name: mysql8
+    build: ./mysql8
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql8/data:/var/lib/mysql:rw
+      - ./mysql8/sql:/tmp/sql:rw
+      - ./mysql8/etc:/etc/mysql:rw
+      - /etc/localtime:/etc/localtime:ro
+      - ./logs/mysql8:/var/log/mysql:rw
+      - ./mysql8/mysql-files:/var/lib/mysql-files
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456"
+    command: --sql-mode="STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
