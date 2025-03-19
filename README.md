@@ -53,8 +53,14 @@ lite-lnmp/
 
 ### Default Ports
 - Nginx: 80, 443
-- PHP 8.x / PHP 7.x
+- PHP: 8080 8.x
 - MySQL: 3308 (MySQL 8.0) / 3306 (MySQL 5.7)
+
+## 💬 Support
+
+- Create an issue in this repository
+- Join our community discussions
+- Email support: opensource@cloudkoonly.com
 
 ### License
 MIT License

@@ -53,7 +53,7 @@ lite-lnmp/
 
 ### 預設埠
 - Nginx: 80, 443
-- PHP 8.x / PHP 7.x
+- PHP: 8080 8.x
 - MySQL: 3308 (MySQL 8.0) / 3306 (MySQL 5.7)
 
 ### 開源授權
