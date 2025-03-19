@@ -7,7 +7,9 @@ Lite LNMP 是一個輕量級、高效的 Docker 開發環境，整合了 Nginx�
 
 ### 特性
 - 🚀 使用 docker-compose 快速部署
-- 🔧 使用最新穩定版本：Nginx、PHP 8、MySQL 8.0
+- 🔧 支援多個環境版本：
+  - PHP 8.x 搭配 MySQL 8.0（最新版）
+  - PHP 7.x 搭配 MySQL 5.7（傳統版）
 - 📦 預配置優化設置
 - 🛠️ 易於自定義和擴展
 - 🔒 安全的預設配置
@@ -28,25 +30,31 @@ git clone https://github.com/cloudkoonly/lite-lnmp.git
 cd lite-lnmp
 ```
 
-3. 啟動環境：
+3. 啟動環境（選擇其一）：
 ```bash
-docker-compose up -d
+# PHP 8 + MySQL 8（最新版）
+docker-compose -f docker-compose.php8mysql8.yml up -d
+
+# PHP 7 + MySQL 5.7（傳統版）
+docker-compose -f docker-compose.php7mysql5.yml up -d
 ```
 
 ### 目錄結構
 ```
 lite-lnmp/
-├── app/                # 應用程式檔案
-├── nginx/             # Nginx 配置
-├── php8/             # PHP 配置
-├── mysql8/           # MySQL 配置
+├── app/              # 應用程式檔案
+├── nginx/            # Nginx 配置
+├── php8/             # PHP 8.x 配置
+├── php7/             # PHP 7.x 配置
+├── mysql8/           # MySQL 8.0 配置
+├── mysql5/           # MySQL 5.7 配置
 └── logs/             # 日誌檔案
 ```
 
 ### 預設埠
 - Nginx: 80, 443
-- PHP: 8080
-- MySQL: 3306
+- PHP 8.x / PHP 7.x
+- MySQL: 3308 (MySQL 8.0) / 3306 (MySQL 5.7)
 
 ### 開源授權
 MIT License

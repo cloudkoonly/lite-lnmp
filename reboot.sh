@@ -1,5 +1,13 @@
 #!/bin/bash
 
-docker-compose stop
-echo "y"|docker-compose rm nginx php7 php8 mysql
+# Stop all containers
+docker-compose down
+
+# Remove all containers
+docker rm -f $(docker ps -aq)
+
+# Remove all images
+docker rmi -f $(docker images -q)
+
+# Start containers
 docker-compose up -d

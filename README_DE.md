@@ -7,7 +7,9 @@ Lite LNMP ist eine leichtgewichtige, effiziente Docker-Entwicklungsumgebung mit 
 
 ### Funktionen
 - 🚀 Schnelle Einrichtung mit docker-compose
-- 🔧 Neueste stabile Versionen: Nginx, PHP 8, MySQL 8.0
+- 🔧 Unterstützung mehrerer Umgebungsversionen:
+  - PHP 8.x mit MySQL 8.0 (Neueste Version)
+  - PHP 7.x mit MySQL 5.7 (Legacy Version)
 - 📦 Vorkonfigurierte und optimierte Einstellungen
 - 🛠️ Einfache Anpassung und Erweiterung
 - 🔒 Sichere Standardkonfigurationen
@@ -28,25 +30,31 @@ git clone https://github.com/cloudkoonly/lite-lnmp.git
 cd lite-lnmp
 ```
 
-3. Umgebung starten:
+3. Umgebung starten (eine auswählen):
 ```bash
-docker-compose up -d
+# Für PHP 8 + MySQL 8 (Neueste Version)
+docker-compose -f docker-compose.php8mysql8.yml up -d
+
+# Für PHP 7 + MySQL 5.7 (Legacy Version)
+docker-compose -f docker-compose.php7mysql5.yml up -d
 ```
 
 ### Verzeichnisstruktur
 ```
 lite-lnmp/
-├── app/                # Anwendungsdateien
-├── nginx/             # Nginx-Konfiguration
-├── php8/             # PHP-Konfiguration
-├── mysql8/           # MySQL-Konfiguration
+├── app/              # Anwendungsdateien
+├── nginx/            # Nginx-Konfiguration
+├── php8/             # PHP 8.x-Konfiguration
+├── php7/             # PHP 7.x-Konfiguration
+├── mysql8/           # MySQL 8.0-Konfiguration
+├── mysql5/           # MySQL 5.7-Konfiguration
 └── logs/             # Protokolldateien
 ```
 
 ### Standardports
 - Nginx: 80, 443
-- PHP: 8080
-- MySQL: 3306
+- PHP 8.x / PHP 7.x
+- MySQL: 3308 (MySQL 8.0) / 3306 (MySQL 5.7)
 
 ### Lizenz
 MIT-Lizenz

@@ -7,7 +7,9 @@ Lite LNMP est un environnement Docker léger et efficace pour le développement 
 
 ### Caractéristiques
 - 🚀 Configuration rapide avec docker-compose
-- 🔧 Dernières versions stables : Nginx, PHP 8, MySQL 8.0
+- 🔧 Support de plusieurs versions d'environnement :
+  - PHP 8.x avec MySQL 8.0 (Dernière version)
+  - PHP 7.x avec MySQL 5.7 (Version héritée)
 - 📦 Paramètres préconfigurés et optimisés
 - 🛠️ Personnalisation et extension faciles
 - 🔒 Configurations de sécurité par défaut
@@ -28,25 +30,31 @@ git clone https://github.com/cloudkoonly/lite-lnmp.git
 cd lite-lnmp
 ```
 
-3. Démarrer l'environnement :
+3. Démarrer l'environnement (choisir un) :
 ```bash
-docker-compose up -d
+# Pour PHP 8 + MySQL 8 (Dernière version)
+docker-compose -f docker-compose.php8mysql8.yml up -d
+
+# Pour PHP 7 + MySQL 5.7 (Version héritée)
+docker-compose -f docker-compose.php7mysql5.yml up -d
 ```
 
 ### Structure des Répertoires
 ```
 lite-lnmp/
-├── app/                # Fichiers d'application
-├── nginx/             # Configuration Nginx
-├── php8/             # Configuration PHP
-├── mysql8/           # Configuration MySQL
+├── app/              # Fichiers d'application
+├── nginx/            # Configuration Nginx
+├── php8/             # Configuration PHP 8.x
+├── php7/             # Configuration PHP 7.x
+├── mysql8/           # Configuration MySQL 8.0
+├── mysql5/           # Configuration MySQL 5.7
 └── logs/             # Fichiers journaux
 ```
 
 ### Ports par Défaut
-- Nginx : 80, 443
-- PHP : 8080
-- MySQL : 3306
+- Nginx: 80, 443
+- PHP 8.x / PHP 7.x
+- MySQL: 3308 (MySQL 8.0) / 3306 (MySQL 5.7)
 
 ### Licence
 Licence MIT

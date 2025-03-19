@@ -3,11 +3,13 @@
 [English](README.md) | [简体中文](README_zh-CN.md) | [繁體中文](README_zh-TW.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Italiano](README_IT.md) | [日本語](README_JP.md)
 
 ### Panoramica
-Lite LNMP è un ambiente Docker leggero ed efficiente per lo sviluppo PHP, che include Nginx, MySQL 8.0 e PHP 8. Fornisce un ambiente di sviluppo standardizzato facile da configurare e mantenere.
+Lite LNMP è un ambiente Docker leggero ed efficiente per lo sviluppo PHP, che include Nginx, MySQL e PHP. Fornisce un ambiente di sviluppo standardizzato facile da configurare e mantenere.
 
 ### Caratteristiche
 - 🚀 Configurazione rapida con docker-compose
-- 🔧 Ultime versioni stabili: Nginx, PHP 8, MySQL 8.0
+- 🔧 Supporto per più versioni dell'ambiente:
+  - PHP 8.x con MySQL 8.0 (Ultima versione)
+  - PHP 7.x con MySQL 5.7 (Versione legacy)
 - 📦 Impostazioni preconfigurate e ottimizzate
 - 🛠️ Facile personalizzazione ed estensione
 - 🔒 Configurazioni sicure predefinite
@@ -28,25 +30,31 @@ git clone https://github.com/cloudkoonly/lite-lnmp.git
 cd lite-lnmp
 ```
 
-3. Avvia l'ambiente:
+3. Avvia l'ambiente (scegli uno):
 ```bash
-docker-compose up -d
+# Per PHP 8 + MySQL 8 (Ultima versione)
+docker-compose -f docker-compose.php8mysql8.yml up -d
+
+# Per PHP 7 + MySQL 5.7 (Versione legacy)
+docker-compose -f docker-compose.php7mysql5.yml up -d
 ```
 
 ### Struttura delle Directory
 ```
 lite-lnmp/
-├── app/                # File dell'applicazione
-├── nginx/             # Configurazione Nginx
-├── php8/             # Configurazione PHP
-├── mysql8/           # Configurazione MySQL
+├── app/              # File dell'applicazione
+├── nginx/            # Configurazione Nginx
+├── php8/             # Configurazione PHP 8.x
+├── php7/             # Configurazione PHP 7.x
+├── mysql8/           # Configurazione MySQL 8.0
+├── mysql5/           # Configurazione MySQL 5.7
 └── logs/             # File di log
 ```
 
 ### Porte Predefinite
 - Nginx: 80, 443
-- PHP: 8080
-- MySQL: 3306
+- PHP 8.x / PHP 7.x
+- MySQL: 3308 (MySQL 8.0) / 3306 (MySQL 5.7)
 
 ### Licenza
 Licenza MIT
