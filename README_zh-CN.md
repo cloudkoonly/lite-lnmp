@@ -53,7 +53,7 @@ lite-lnmp/
 
 ### 默认端口
 - Nginx: 80, 443
-- PHP 8.x / PHP 7.x
+- PHP: 8080 8.x
 - MySQL: 3308 (MySQL 8.0) / 3306 (MySQL 5.7)
 
 ### 开源协议
@@ -77,5 +77,8 @@ MIT License
 使用本软件即表示您确认并接受这些限制和风险。
 
 ---
+## 💬 技术支持
+
+opensource@cloudkoonly.com
 
 © 2025 [Cloudkoonly](https://www.cloudkoonly.com). 保留所有权利.

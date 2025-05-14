@@ -47,7 +47,7 @@ lite-lnmp/
 ├── php8/             # PHP 8.x設定
 ├── php7/             # PHP 7.x設定
 ├── mysql8/           # MySQL 8.0設定
-├── mysql5/           # MySQL 5.7設定
+├── mysql/           # MySQL 5.7設定
 └── logs/             # ログファイル
 ```
 
@@ -77,5 +77,8 @@ MIT License
 本ソフトウェアを使用することで、これらの制限事項とリスクを承諾したものとみなされます。
 
 ---
+## 💬 Support
+
+opensource@cloudkoonly.com
 
 © 2025 [Cloudkoonly](https://www.cloudkoonly.com). All Rights Reserved.

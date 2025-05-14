@@ -47,13 +47,13 @@ lite-lnmp/
 ├── php8/             # Configurazione PHP 8.x
 ├── php7/             # Configurazione PHP 7.x
 ├── mysql8/           # Configurazione MySQL 8.0
-├── mysql5/           # Configurazione MySQL 5.7
+├── mysql/           # Configurazione MySQL 5.7
 └── logs/             # File di log
 ```
 
 ### Porte Predefinite
 - Nginx: 80, 443
-- PHP 8.x / PHP 7.x
+- PHP: 8080 8.x
 - MySQL: 3308 (MySQL 8.0) / 3306 (MySQL 5.7)
 
 ### Licenza
@@ -77,5 +77,8 @@ Licenza MIT
 Utilizzando questo software, riconosci e accetti queste limitazioni e rischi.
 
 ---
+## 💬 Support
+
+opensource@cloudkoonly.com
 
 © 2025 [Cloudkoonly](https://www.cloudkoonly.com). Tutti i diritti riservati.

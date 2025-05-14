@@ -77,5 +77,8 @@ MIT License
 使用本軟體即表示您確認並接受這些限制和風險。
 
 ---
+## 💬 Support
+
+opensource@cloudkoonly.com
 
 © 2025 [Cloudkoonly](https://www.cloudkoonly.com). 保留所有權利.

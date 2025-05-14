@@ -13,5 +13,5 @@ nginx/ca/*
 nginx/conf.d/*
 !nginx/conf.d/default.conf
 /.vagrant
-/app/*
-!/app/hello/*
+#/app/*
+#!/app/hello/*

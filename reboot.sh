@@ -1,13 +1,10 @@
 #!/bin/bash
 
 # Stop all containers
-docker-compose down
+docker-compose stop
 
 # Remove all containers
 docker rm -f $(docker ps -aq)
-
-# Remove all images
-docker rmi -f $(docker images -q)
 
 # Start containers
 docker-compose up -d

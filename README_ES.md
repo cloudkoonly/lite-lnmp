@@ -77,5 +77,8 @@ Licencia MIT
 Al usar este software, usted reconoce y acepta estas limitaciones y riesgos.
 
 ---
+## 💬 Support
+
+opensource@cloudkoonly.com
 
 © 2025 [Cloudkoonly](https://www.cloudkoonly.com). Todos los derechos reservados.

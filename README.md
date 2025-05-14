@@ -47,7 +47,7 @@ lite-lnmp/
 ├── php8/             # PHP 8.x configuration
 ├── php7/             # PHP 7.x configuration
 ├── mysql8/           # MySQL 8.0 configuration
-├── mysql5/           # MySQL 5.7 configuration
+├── mysql/            # MySQL 5.7 configuration
 └── logs/             # Log files
 ```
 
@@ -55,12 +55,6 @@ lite-lnmp/
 - Nginx: 80, 443
 - PHP: 8080 8.x
 - MySQL: 3308 (MySQL 8.0) / 3306 (MySQL 5.7)
-
-## 💬 Support
-
-- Create an issue in this repository
-- Join our community discussions
-- Email support: opensource@cloudkoonly.com
 
 ### License
 MIT License
@@ -84,4 +78,10 @@ By using this software, you acknowledge and accept these limitations and risks.
 
 ---
 
- 2025 [Cloudkoonly](https://www.cloudkoonly.com). All Rights Reserved.
+## 💬 Support
+
+- Create an issue in this repository
+- Join our community discussions
+- Email support: opensource@cloudkoonly.com
+
+© 2025 [Cloudkoonly](https://www.cloudkoonly.com). All Rights Reserved.
